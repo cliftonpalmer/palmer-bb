@@ -1,0 +1,42 @@
+# https://hub.docker.com/r/bitnami/phpbb/
+version: '3'
+networks:
+    backend:
+        driver: overlay
+    proxy:
+        external:
+            name: proxy
+services:
+    mariadb:
+        image: bitnami/mariadb:10.3
+        environment:
+        - ALLOW_EMPTY_PASSWORD=yes
+        - MARIADB_USER=${DB_USER}
+        - MARIADB_DATABASE=${DB_DATABASE}
+        volumes:
+        - mariadb_data:/bitnami
+        networks:
+        - backend
+    web:
+        build: .
+        image: cliftonpalmer/phpbb
+        environment:
+        - MARIADB_HOST=mariadb
+        - MARIADB_PORT_NUMBER=3306
+        - PHPBB_DATABASE_USER=${DB_USER}
+        - PHPBB_DATABASE_NAME=${DB_DATABASE}
+        - ALLOW_EMPTY_PASSWORD=yes
+        - PHPBB_USERNAME=admin
+        - PHPBB_PASSWORD=982374nr8ahsfencluc4ocq28efzuos389aore3w4w7894n73298dredhcniu3e
+        volumes:
+        - phpbb_data:/bitnami
+        depends_on:
+        - mariadb
+        networks:
+        - proxy
+        - backend
+volumes:
+    mariadb_data:
+        driver: local
+    phpbb_data:
+        driver: local

@@ -1,0 +1,78 @@
+Clean-Boardz - Quick Style Guide
+Thanks for installing the Clean-Boardz style,
+This guide should help get you started with any customisations you may wish to make to the style.
+
+
+How To Change The Styles Main Blue Colour:
+1) Using a text editor open the colours.css style sheet. (Clean-Boardz/theme/colours.css)
+2) The blue colour hex code is: #307AC3, find and replace all the #307AC3 with the colour code you wish to use.
+3) Upload the updated colours.css file.
+4) Log in to your forum ACP and purge the cache. (ACP --> General --> Purge the cache)
+
+
+How To Hide The Logo Completely:
+1) Using a text editor open the common.css style sheet. (Clean-Boardz/theme/common.css)
+2) Find: .site_logo { (line 172)
+3) Change display from inline-block to none.
+4) Upload the updated common.css file.
+5) Log in to your forum ACP and purge the cache. (ACP --> General --> Purge the cache)
+
+
+How To Change The Logo:
+1) Upload your logo to the style image folder. (Clean-Boardz/theme/images)
+2) Using a text editor open the colours.css style sheet. (Clean-Boardz/theme/colours.css)
+3) Find: .site_logo { (line 294)
+4) Change the background-image URL to your logo URL. (example: "images/site_logo.png" to images/your_logo.png")
+5) Change the 350px width and 52px height to the size of your logo.
+6) Upload the updated colours.css file.
+7) Log in to your forum ACP and purge the cache. (ACP --> General --> Purge the cache)
+
+
+How To Hide The Logo On Small Screens:
+1) Using a text editor open the responsive.css style sheet. (Clean-Boardz/theme/responsive.css)
+2) Find: .logo { (line 200)
+3) Change display from inline-block to none.
+4) Upload the updated responsive.css file.
+5) Log in to your forum ACP and purge the cache. (ACP --> General --> Purge the cache)
+
+
+How To Change The Small Screen Logo:
+1) Upload your logo to the style image folder. (Clean-Boardz/theme/images)
+2) Using a text editor open the responsive.css style sheet. (Clean-Boardz/theme/responsive.css)
+3) Find: .site_logo { (line 208)
+4) Change the background-image URL to your logo URL. (example: "images/site_logo_mobile.png" to images/your_mobile_logo.png")
+5) Change the 250px width and 37px height to the size of your logo.
+6) Upload the updated responsive.css file.
+7) Log in to your forum ACP and purge the cache. (ACP --> General --> Purge the cache)
+
+
+How To Hide The Site Name Completely:
+1) Using a text editor open the common.css style sheet. (Clean-Boardz/theme/common.css)
+2) Find: h1 { (line 19)
+3) Change display from block to none.
+4) Upload the updated common.css file.
+5) Log in to your forum ACP and purge the cache. (ACP --> General --> Purge the cache)
+
+
+How To Hide The Site Name On Small Screens:
+1) Using a text editor open the responsive.css style sheet. (Clean-Boardz/theme/responsive.css)
+2) Find: .headerbar h1 { (line 238)
+3) Change display from block to none.
+4) Upload the updated responsive.css file.
+5) Log in to your forum ACP and purge the cache. (ACP --> General --> Purge the cache)
+
+
+How To Hide The Site Description Completely:
+1) Using a text editor open the common.css style sheet. (Clean-Boardz/theme/common.css)
+2) Find: .headerbar p { (line 194)
+3) Change display from block to none.
+4) Upload the updated common.css file.
+5) Log in to your forum ACP and purge the cache. (ACP --> General --> Purge the cache)
+
+
+How To Hide Site Description On Small Screens:
+1) Using a text editor open the responsive.css style sheet. (Clean-Boardz/theme/responsive.css)
+2) Find: .site-description p { (line 214)
+3) Change display from block to none.
+4) Upload the updated responsive.css file.
+5) Log in to your forum ACP and purge the cache. (ACP --> General --> Purge the cache)
